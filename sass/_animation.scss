@@ -1,0 +1,29 @@
+/* --------------------------------
+Animation de la page d'acceuil
+----------------------------------*/
+
+.animation div{
+    transform: translateX(1000px);
+    animation: anim-entete 1s 1s forwards cubic-bezier(0,1,1,1.21);
+}
+
+@keyframes anim-entete
+{
+0%{
+    transform: translateX(1000px);
+}
+100%{
+    transform: translateX(0);
+}
+}
+
+
+$columns :5;
+
+@for $i from 1 through $columns{
+    .animation div:nth-of-type(#{$i}){
+
+        animation-delay: .5*$i#{s};
+
+    }
+}
