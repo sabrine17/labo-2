@@ -279,4 +279,19 @@ Animation de la page d'acceuil
 .animation2 div:nth-of-type(5) {
   animation-delay: 2.5s;
 }
+
+.animation3 div {
+  transform: translateX(1000px);
+  animation: anim-piedpage 1s 1s forwards cubic-bezier(0, 1, 1, 1.21);
+  animation-delay: 1s;
+}
+
+@keyframes anim-piedpage {
+  0% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /*# sourceMappingURL=style.css.map */
