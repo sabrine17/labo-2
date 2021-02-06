@@ -27,3 +27,30 @@ $columns :5;
 
     }
 }
+
+
+@keyframes anim-principal
+{
+0%{
+    transform: translateY(1000px);
+}
+100%{
+    transform: translateY(0);
+}
+}
+
+.animation2 div{
+    transform: translateY(1000px);
+    animation: anim-principal 1s 1s forwards cubic-bezier(0,1,1,1.21);
+}
+
+
+$columns2 :5;
+
+@for $i from 1 through $columns2{
+    .animation2 div:nth-of-type(#{$i}){
+
+        animation-delay: .5*$i#{s};
+
+    }
+}

@@ -65,7 +65,7 @@ p {
 .bloc {
   border: 1px solid #666;
   background-color: transparent;
-  color: wheat;
+  color: white;
   font-size: 3rem;
   margin-left: 0;
   display: flex;
@@ -87,12 +87,19 @@ p {
   margin: 0 auto;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "entete entete entete" "menu menu menu" "annonce1 annonce1 annonce1" "principal principal principal" "pied-page pied-page pied-page";
+  grid-template-areas: "entete entete entete"
+ "menu menu menu"
+ "annonce1 annonce1 annonce1"
+ "principal principal principal"
+ "pied-page pied-page pied-page";
 }
 
 @media (min-width: 1000px) {
   .grille {
-    grid-template-areas: "entete entete entete" "menu menu menu" "principal annonce1 annonce1" "pied-page pied-page pied-page";
+    grid-template-areas: "entete entete entete"
+ "menu menu menu"
+ "principal annonce1 annonce1"
+ "pied-page pied-page pied-page";
   }
 }
 
@@ -138,11 +145,11 @@ p {
   height: 50px;
   flex-direction: row;
   border-radius: 50%;
-  background-color: blue;
+  background-color: red;
 }
 
 .annonce1 {
-  background-color: #efebc5;
+  background-color: white;
   color: #5e6e81;
   border-radius: 10px;
   box-shadow: 7px 3px 11px 4px #757472;
@@ -159,7 +166,7 @@ p {
 .annonce2 {
   padding: 42px;
   margin: 20px;
-  background-color: #efebc5;
+  background-color: white;
   color: #1c2127;
 }
 
@@ -178,6 +185,26 @@ p {
 
 .principal h3 {
   padding: 1rem 0 1rem 0;
+}
+
+.animation2 div:nth-child(1) {
+  color: red;
+}
+
+.animation2 div:nth-child(2) {
+  color: orange;
+}
+
+.animation2 div:nth-child(3) {
+  color: #00ff0d;
+}
+
+.animation2 div:nth-child(4) {
+  color: pink;
+}
+
+.animation2 div:nth-child(5) {
+  color: white;
 }
 
 /*----------------------------------------
@@ -217,6 +244,40 @@ Animation de la page d'acceuil
 }
 
 .animation div:nth-of-type(5) {
+  animation-delay: 2.5s;
+}
+
+@keyframes anim-principal {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animation2 div {
+  transform: translateY(1000px);
+  animation: anim-principal 1s 1s forwards cubic-bezier(0, 1, 1, 1.21);
+}
+
+.animation2 div:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.animation2 div:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.animation2 div:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+
+.animation2 div:nth-of-type(4) {
+  animation-delay: 2s;
+}
+
+.animation2 div:nth-of-type(5) {
   animation-delay: 2.5s;
 }
 /*# sourceMappingURL=style.css.map */
