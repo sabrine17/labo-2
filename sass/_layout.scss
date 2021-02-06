@@ -42,7 +42,7 @@ p {
 .bloc {
     border : 1px solid #666;
     background-color:transparent;
-    color :wheat;
+    color :white;
     font-size: 3rem;
     margin-left : 0;
     display : flex;
@@ -123,15 +123,15 @@ p {
         height: 50px;
         flex-direction: row;
         border-radius: 50%;
-        background-color: blue;
+        background-color:red;
 
     }
 }
 
 .annonce1{
     
-    background-color: #efebc5;
-    color: #5e6e81;
+    background-color: white;
+    color: red;
     border-radius: 10px;
     box-shadow: 7px 3px 11px 4px #757472;
     padding: 42px;
@@ -140,13 +140,14 @@ p {
         font-size: .4em;
         display:flex;
         align-items: center;
+        color:black;
         }
     }
 
 .annonce2{
     padding: 42px;
     margin: 20px;
-    background-color: #efebc5;
+    background-color: white;
     color: #1c2127;
     section {
         display : flex;
@@ -172,17 +173,22 @@ color:red;
 }
 
 .animation2 div:nth-child(2){
-    color: orange;
+    color: white
     }
 
 .animation2 div:nth-child(3){
-    color: rgb(0, 255, 13);
+    color: red;
     }
 
 .animation2 div:nth-child(4){
-    color: pink;
+    color: white;
     }
 
 .animation2 div:nth-child(5){
-    color: white;
+    color: red;
+    }
+
+    .animation2{
+        font-family: 'Bebas Neue', cursive;
+        font-size:70px;
     }

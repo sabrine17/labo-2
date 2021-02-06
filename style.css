@@ -87,19 +87,12 @@ p {
   margin: 0 auto;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "entete entete entete"
- "menu menu menu"
- "annonce1 annonce1 annonce1"
- "principal principal principal"
- "pied-page pied-page pied-page";
+  grid-template-areas: "entete entete entete" "menu menu menu" "annonce1 annonce1 annonce1" "principal principal principal" "pied-page pied-page pied-page";
 }
 
 @media (min-width: 1000px) {
   .grille {
-    grid-template-areas: "entete entete entete"
- "menu menu menu"
- "principal annonce1 annonce1"
- "pied-page pied-page pied-page";
+    grid-template-areas: "entete entete entete" "menu menu menu" "principal annonce1 annonce1" "pied-page pied-page pied-page";
   }
 }
 
@@ -150,7 +143,7 @@ p {
 
 .annonce1 {
   background-color: white;
-  color: #5e6e81;
+  color: red;
   border-radius: 10px;
   box-shadow: 7px 3px 11px 4px #757472;
   padding: 42px;
@@ -161,6 +154,7 @@ p {
   font-size: .4em;
   display: flex;
   align-items: center;
+  color: black;
 }
 
 .annonce2 {
@@ -192,19 +186,24 @@ p {
 }
 
 .animation2 div:nth-child(2) {
-  color: orange;
+  color: white;
 }
 
 .animation2 div:nth-child(3) {
-  color: #00ff0d;
+  color: red;
 }
 
 .animation2 div:nth-child(4) {
-  color: pink;
+  color: white;
 }
 
 .animation2 div:nth-child(5) {
-  color: white;
+  color: red;
+}
+
+.animation2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 70px;
 }
 
 /*----------------------------------------
