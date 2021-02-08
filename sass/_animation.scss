@@ -32,29 +32,21 @@ $columns :5;
 Animation de la section principal
 ----------------------------------*/
 
-$paramAnim: (
-    1 : translateY(-500px),
+/*$paramAnim: (
+    1:  translateY(-500px),
     2:  translateY(-600px),
-    3 : translateX(-500px),
+    3:  translateX(-500px),
     4:  translateY(600px),
     5:  translateY(500px)
     );
-
+*/
 /*
 @function couleur($propriete){
     @return map-get($couleurs, $propriete);
 }
-
-$animation :5;
-
-@for $i from 1 through $animation{
-    .animation2 div:nth-of-type(#{$i}){
-
-        animation: anim-#{$i} 1s both .5*$i#{s};
-        @return map-get($paramAnim, $animation);
-    }
-}
 */
+
+
 @keyframes anim-principal
 {
 0%{
@@ -66,21 +58,30 @@ $animation :5;
 }
 
 .animation2 div{
+
     transform: translateY(1000px);
-    animation: anim-principal 1s 1s both cubic-bezier(0,1,1,1.21);
+    animation: anim-principal 1s 1s forwards cubic-bezier(0,1,1,1.21); 
 }
-
-
 
 $mot :5;
 
 @for $i from 1 through $mot{
     .animation2 div:nth-of-type(#{$i}){
 
+        animation-delay: .5*$i#{s};
+
+    }
+    }
+
+/*@for $i from 1 through $mot{
+    .animation2 div:nth-of-type(#{$i}){
+
         animation: anim-#{$i} 1s both .5*$i#{s};
 
     }
-}
+}*/
+
+
 /* --------------------------------
 Animation de la section pied de page
 ----------------------------------*/
