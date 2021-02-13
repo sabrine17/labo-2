@@ -273,6 +273,10 @@ p {
   background-color: red;
 }
 
+.animation div img {
+  margin: 5px;
+}
+
 .annonce1 {
   background-color: white;
   color: red;
