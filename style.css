@@ -22,7 +22,7 @@ body {
 
 body::after {
   content: "";
-  clip-path: polygon(25% 100%, 1% 100%, 1% 0%, 100% 0%, 100% 57%);
+  clip-path: polygon(25% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 57%);
   background-color: #181a1d;
   position: absolute;
   width: 100%;
@@ -94,7 +94,7 @@ p {
     grid-template-areas: "entete entete entete" "menu menu menu" "principal annonce1 annonce1" "pied-page pied-page pied-page";
   }
   .grille .pied-page {
-    color: white;
+    color: red;
   }
 }
 
@@ -114,7 +114,7 @@ p {
 
 @media (max-width: 720px) {
   .grille {
-    grid-template-areas: "entete" "menu" "principal" "annonce1" "pied-page";
+    grid-template-areas: "entete" "menu" "principal" "annonce1" "icone" "pied-page";
     margin: 0 auto;
     grid-template-columns: 1fr;
   }
@@ -131,8 +131,6 @@ p {
     color: white;
     border-radius: 10px;
     box-shadow: 7px 3px 11px 4px #ff0022;
-    padding: 42px;
-    margin: 20px;
   }
   .grille .annonce1 div {
     font-size: .4em;
@@ -222,12 +220,20 @@ p {
   border-radius: 50%;
 }
 
+.icone {
+  align-items: center;
+}
+
 .entete {
   grid-area: entete;
 }
 
 .menu {
   grid-area: menu;
+}
+
+.icone {
+  grid-area: icone;
 }
 
 .annonce1 {
@@ -379,19 +385,6 @@ Animation de la page d'acceuil
 /* --------------------------------
 Animation de la section principal
 ----------------------------------*/
-/*$paramAnim: (
-    1:  translateY(-500px),
-    2:  translateY(-600px),
-    3:  translateX(-500px),
-    4:  translateY(600px),
-    5:  translateY(500px)
-    );
-*/
-/*
-@function couleur($propriete){
-    @return map-get($couleurs, $propriete);
-}
-*/
 @keyframes anim-principal {
   0% {
     transform: translateY(-1000px);
@@ -442,5 +435,21 @@ Animation de la section pied de page
   100% {
     transform: translateX(0);
   }
+}
+
+/* --------------------------------
+Animation image annonce1
+----------------------------------*/
+@keyframes spining_coin {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.annonce1 div img:hover {
+  animation: spining_coin 0.5s infinite linear;
 }
 /*# sourceMappingURL=style.css.map */

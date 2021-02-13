@@ -16,7 +16,7 @@ body {
 
 body::after {
     content : "";
-    clip-path: polygon(25% 100%, 1% 100%, 1% 0%, 100% 0%, 100% 57%);
+    clip-path: polygon(25% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 57%);
 
     //background-color: rgb(43, 71, 233);
     background-color: couleur(primaire);
@@ -79,8 +79,10 @@ p {
             "menu menu menu"
             "principal annonce1 annonce1"
             "pied-page pied-page pied-page";
+            
+            
             .pied-page{
-                color:white;
+                color:red;
             }
         }
 
@@ -101,6 +103,7 @@ p {
 
             .pied-page{
                 color:black;
+              
             }
        
         }
@@ -112,6 +115,7 @@ p {
                 "menu"
                 "principal"
                 "annonce1"
+                "icone"
                 "pied-page";
                 margin : 0 auto;
                 grid-template-columns: 1fr;
@@ -129,8 +133,8 @@ p {
                     color: white;
                     border-radius: 10px;
                     box-shadow: 7px 3px 11px 4px #ff0022;
-                    padding: 42px;
-                    margin: 20px;
+                   
+                  
                     div{
                         font-size: .4em;
                         display:flex;
@@ -250,6 +254,13 @@ p {
 
 
 
+.icone{
+    align-items: center;
+   
+}
+
+
+
 .entete{
     grid-area: entete;
 
@@ -260,6 +271,9 @@ p {
 
 }
 
+.icone{
+    grid-area: icone;
+}
 
 .annonce1{
     grid-area: annonce1;
@@ -366,4 +380,5 @@ color:red;
     .animation3 div
     {  
         font-size:30px;
+       
     }
