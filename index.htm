@@ -23,9 +23,22 @@
             <div>5</div>
             </section>
         </header>
-        <nav class="bloc menu"><h4>Menu</h4></nav>
+        <nav class="menu">
+            <input type="checkbox" id="chkburger">
+            <label for="chkburger" id="burger">
+                <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu-alt-1&color=FFFAFA" width="32" height="32">
+            </label>
+            <nav>
+                
+                <a href="#"><img class="i" src="https://s2.svgbox.net/social.svg?ic=itunes&color=FFFAFA" width="32" height="32"></a>
+                <a href="#"><img class="m" src="https://s2.svgbox.net/social.svg?ic=instagram&color=FFFAFA" width="32" height="32"></a>
+                <a href="#"><img class="a" src="https://s2.svgbox.net/social.svg?ic=wordpress&color=FFFAFA" width="32" height="32"></a>
+                <a href="#"><img class="g" src="https://s2.svgbox.net/social.svg?ic=imdb&color=FFFAFA" width="32" height="32"></a>
+                <a href="#"><img class="e" src="https://s2.svgbox.net/social.svg?ic=crunchyroll&color=FFFAFA" width="32" height="32"></a>
+            </nav>
+        </nav>
         <sidebar class="bloc annonce1">
-           Annonce #1
+         
           <section>
               <div><img src="https://s2.svgbox.net/illlustrations.svg?ic=macbook&color=026df7" width="32" height="32">
                 Lorem ipsum dolor,  illum quo pariatur ab libero. Lorem ipsum dolor, 
@@ -57,7 +70,7 @@
                 <div>d'interface</div>
                 <div>et</div>
                 <div>développement</div>
-                <div>Web</div>
+                <div class="lettre1">Web</div>
                 </section>
          
 
@@ -69,4 +82,26 @@
         </footer>
     </section>
 </body>
+
+<script>
+    let menuOuvert = false   
+    console.log(menuOuvert)
+    let burger = document.getElementById('burger')
+    burger.addEventListener('mousedown', function(){
+       if (menuOuvert == false){
+           burger.style.transitionDelay = ".1s"
+           burger.style.borderRadius = "5rem 0 0 5rem"
+           menuOuvert = true 
+           
+       }
+       else {
+           burger.style.transitionDelay = "2.18s"
+           burger.style.borderRadius = "5rem"
+           menuOuvert = false 
+       }
+   
+    })
+   
+   
+   </script>
 </html>

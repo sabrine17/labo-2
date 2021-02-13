@@ -16,7 +16,8 @@ body {
 
 body::after {
     content : "";
-    clip-path: polygon(0 0, 80% 0 , 50% 100% , 0 100%);
+    clip-path: polygon(25% 100%, 1% 100%, 1% 0%, 100% 0%, 100% 57%);
+
     //background-color: rgb(43, 71, 233);
     background-color: couleur(primaire);
     position: absolute;
@@ -40,7 +41,7 @@ p {
 }
 
 .bloc {
-    border : 1px solid #666;
+   
     background-color:transparent;
     color :white;
     font-size: 3rem;
@@ -78,8 +79,176 @@ p {
             "menu menu menu"
             "principal annonce1 annonce1"
             "pied-page pied-page pied-page";
+            .pied-page{
+                color:white;
+            }
         }
+
+        @include tablette
+        {
+            grid-template-areas: 
+            "entete"
+            "menu"
+            "principal"
+            "annonce1"
+            "pied-page";
+            margin : 0 auto;
+            grid-template-columns: 1fr;
+           
+            .entete div{
+                display: none;
+            }
+
+            .pied-page{
+                color:black;
+            }
+       
+        }
+       
+        @include mobile
+        {
+            grid-template-areas: 
+                "entete"
+                "menu"
+                "principal"
+                "annonce1"
+                "pied-page";
+                margin : 0 auto;
+                grid-template-columns: 1fr;
+               
+                .principal div{
+                   font-size: 60px;
+                }
+                .entete div{
+                    display: none;
+                }
+                .annonce1{
+                    width:300px;
+                    height:500px;
+                    background-color: black;
+                    color: white;
+                    border-radius: 10px;
+                    box-shadow: 7px 3px 11px 4px #ff0022;
+                    padding: 42px;
+                    margin: 20px;
+                    div{
+                        font-size: .4em;
+                        display:flex;
+                        align-items: center;
+                        color:white;
+                        
+                        }
+                }
+                
+           .pied-page{
+               color:black;
+           }
+      
+             
+
+               
+            }
+
 }
+
+#chkburger {
+    display: none;
+    
+  }
+  
+  #burger {
+    display: flex;
+    background-color:black;
+    border-radius: 5rem;
+    padding: .8rem;
+    width: 3rem;
+    height:3rem;
+   justify-content: center;
+   align-items: center;
+  }
+  
+  #chkburger:checked ~ nav {
+    clip-path: ellipse(100% 163% at 47% 50%);
+    justify-content: space-around;
+    
+  }
+  
+  #chkburger:checked ~ nav a{
+  opacity: 100%;
+  
+  
+  }
+  .menu {
+    display: flex;
+  }
+  
+  .menu nav {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    transition: clip-path 3s;
+    clip-path: ellipse(50% 103% at -50% 50%);
+    border-radius : 0 5rem 5rem 0;
+    justify-content: space-around;
+    transform:translateX(-1em);
+    
+  }
+  
+  .menu nav a {
+    display: block;
+    padding: .8rem;
+    opacity: 0;
+    transition: opacity 2s;
+    
+  
+  }
+  
+  
+  .menu nav a:hover
+  {
+  
+  border-radius: 2;
+  opacity:0.8;
+  transition: .9s ease-in-out;
+  
+  
+  }
+  
+  
+  .i:hover{
+    background-color: rgb(133, 0, 0);
+    border-radius: 50%;
+    
+  
+  }
+  .m:hover{
+    background-color: rgb(133, 0, 0);
+    border-radius: 30%;
+    
+   
+  }
+  .a:hover{
+    background-color: rgb(133, 0, 0);
+    border-radius: 50%;
+   
+    
+  }
+  .g:hover{
+    background-color: rgb(133, 0, 0);
+    border-radius: 30%;
+   
+    
+  }
+  .e:hover{
+    background-color: rgb(133, 0, 0);
+    border-radius: 50%;
+  
+   
+  }
+  
+
+
+
 
 .entete{
     grid-area: entete;
@@ -90,6 +259,7 @@ p {
     grid-area: menu;
 
 }
+
 
 .annonce1{
     grid-area: annonce1;
@@ -173,7 +343,7 @@ color:red;
 }
 
 .animation2 div:nth-child(2){
-    color: white
+    color: white;
     }
 
 .animation2 div:nth-child(3){

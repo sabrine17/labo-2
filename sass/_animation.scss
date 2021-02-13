@@ -59,7 +59,7 @@ Animation de la section principal
 
 .animation2 div{
 
-    transform: translateY(1000px);
+    transform: translateY(-1000px);
     animation: anim-principal 1s 1s forwards cubic-bezier(0,1,1,1.21); 
 }
 
@@ -73,13 +73,7 @@ $mot :5;
     }
     }
 
-/*@for $i from 1 through $mot{
-    .animation2 div:nth-of-type(#{$i}){
 
-        animation: anim-#{$i} 1s both .5*$i#{s};
-
-    }
-}*/
 
 
 /* --------------------------------
